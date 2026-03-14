@@ -1,0 +1,146 @@
+{
+  "projectType": "api-service",
+  "projectName": "Sistema Bancario",
+  "projectDescription": "A comprehensive banking system REST API with authentication, account management, transactions, and loyalty services built with Node.js, PostgreSQL, and MongoDB.",
+  "theme": "willow",
+  "primaryColor": "#1a5f7a",
+  "lightColor": "#4a9eba",
+  "darkColor": "#0d3d4f",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/authentication",
+              "concepts/roles-permissions",
+              "concepts/account-types",
+              "concepts/transactions"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/user-registration",
+              "guides/account-creation",
+              "guides/making-transactions",
+              "guides/loyalty-services",
+              "guides/admin-operations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/register",
+              "api/auth/login",
+              "api/auth/verify-email",
+              "api/auth/forgot-password",
+              "api/auth/reset-password"
+            ]
+          },
+          {
+            "group": "User Management",
+            "pages": [
+              "api/users/get-profile",
+              "api/users/update-profile",
+              "api/users/list-users"
+            ]
+          },
+          {
+            "group": "Accounts",
+            "pages": [
+              "api/accounts/create",
+              "api/accounts/list",
+              "api/accounts/get-by-id",
+              "api/accounts/update-balance",
+              "api/accounts/deactivate"
+            ]
+          },
+          {
+            "group": "Transactions",
+            "pages": [
+              "api/transactions/create",
+              "api/transactions/list",
+              "api/transactions/history",
+              "api/transactions/cancel"
+            ]
+          },
+          {
+            "group": "Deposits & Withdrawals",
+            "pages": [
+              "api/deposits/create",
+              "api/withdrawals/create"
+            ]
+          },
+          {
+            "group": "Services & Rewards",
+            "pages": [
+              "api/services/create",
+              "api/services/list",
+              "api/services/redeem",
+              "api/services/redeem-history"
+            ]
+          },
+          {
+            "group": "Account Requests",
+            "pages": [
+              "api/requests/list",
+              "api/requests/approve",
+              "api/requests/reject"
+            ]
+          },
+          {
+            "group": "Admin Operations",
+            "pages": [
+              "api/admin/update-role",
+              "api/admin/disable-user"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "JWT-based authentication with email verification",
+    "Role-based access control (Admin & User roles)",
+    "Multi-type bank accounts (Savings & Checking)",
+    "Secure money transfers and deposits",
+    "Automated interest accrual for savings accounts",
+    "Loyalty points system with service redemption",
+    "Admin approval workflow for account creation",
+    "Transaction history and cancellation",
+    "Rate limiting and security middleware",
+    "Currency conversion support"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/auth/register",
+    "POST /api/v1/auth/login",
+    "POST /api/v1/auth/verify-email",
+    "GET /api/v1/auth/profile",
+    "POST /api/v1/cuentas/create",
+    "GET /api/v1/cuentas",
+    "POST /api/v1/transactions",
+    "GET /api/v1/transactions",
+    "POST /api/v1/services/create",
+    "POST /api/v1/redeem_services/redeem",
+    "PUT /api/v1/request_accounts/:id/aprobar",
+    "PUT /api/v1/request_accounts/:id/rechazar",
+    "POST /api/v1/deposits",
+    "POST /api/v1/withdrawals"
+  ]
+}
